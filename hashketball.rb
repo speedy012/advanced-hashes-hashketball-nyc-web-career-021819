@@ -149,14 +149,7 @@ hashketball = {
 end
 
  
- def team_colors(team, hashketball)
-  sym = team.to_sym
-  if hashketball.include?(sym)
-   hashketball[sym][:colors]
-  else
-   "Try home or away."
-  end
-end
+ 
  
  
 def team_names
