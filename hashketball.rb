@@ -149,6 +149,26 @@ hashketball = {
 end
 
  
+def team_names
+  game_hash.map do |location, team_data|
+    team_data[:team_name]
+  end
+end
+
+def players_numbers(name_of_team)
+
+  numbers = []
+  game_hash.each do |team, chars|
+    if name_of_team == game_hash[team][:team_name]
+      game_hash[team][:players].each do |name, stats|
+        numbers.push(stats[:number])
+      end
+    end
+  end
+  return numbers
+end
+
+
 
   
 
