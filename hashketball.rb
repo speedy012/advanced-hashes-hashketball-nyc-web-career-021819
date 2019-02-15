@@ -148,6 +148,40 @@ hashketball = {
 }
 end
  
+def num_points_scored(name)
+	game_hash.each do |team, team_data|  #game_hash => {}
+		team_data.each do |player, player_data| #:player => {}
+end 
 
+  
+def team_colors(team)
+  #Goes through hash, then home away, then names, colors, players
+  game_hash.each do |location, team_data|
+    #If names, colors, players[:team_name] = argument
+    if team_data[:team_name] == team
+      return team_data[:colors]
+    end
+  end
+end
+
+
+def team_names
+  game_hash.map do |location, team_data|
+    team_data[:team_name]
+  end
+end
+
+def players_numbers(name_of_team)
+
+  numbers = []
+  game_hash.each do |team, chars|
+    if name_of_team == game_hash[team][:team_name]
+      game_hash[team][:players].each do |name, stats|
+        numbers.push(stats[:number])
+      end
+    end
+  end
+  return numbers
+end
 
 
