@@ -152,7 +152,7 @@ def num_points_scored(name)
 	game_hash.each do |team, team_data|  #game_hash => {}
 		team_data.each do |player, player_data| #:player => {}
 end 
-end 
+
   
 def team_colors(team)
   #Goes through hash, then home away, then names, colors, players
