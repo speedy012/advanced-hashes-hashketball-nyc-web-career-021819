@@ -155,15 +155,7 @@ def num_points_scored(name)
 end 
 
   
-def team_colors(team)
-  #Goes through hash, then home away, then names, colors, players
-  game_hash.each do |location, team_data|
-    #If names, colors, players[:team_name] = argument
-    if team_data[:team_name] == team
-      return team_data[:colors]
-    end
-  end
-end
+
 
 
 def team_names
